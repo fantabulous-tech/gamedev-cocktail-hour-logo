@@ -10,7 +10,7 @@ https://fantabulous-tech.github.io/gamedev-cocktail-hour-logo/
 ## Run in Editor
 
 1. Pull down this repo.
-2. Open in Unity
+2. Open the `Assets/Main.unity` scene in Unity
 3. Hit 'Play' button in Editor
 
 ## License
