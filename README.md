@@ -1,6 +1,6 @@
 # GameDev Cocktail Hour Logo
 
-A little Unity project for putting together an animated logo. Feel free to fork and play!
+A little Unity project for putting together an animated logo. Feel free to fork and play with it!
 
 ## Run in Browser
 
