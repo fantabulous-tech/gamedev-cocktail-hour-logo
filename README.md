@@ -4,8 +4,8 @@ A little Unity project for putting together a logo. Feel free to fork and play!
 
 ## Run in Browser
 
-You can play the included version here:
-
+You can play the pre-build WebGL version here:<br/>
+https://fantabulous-tech.github.io/gamedev-cocktail-hour-logo/
 
 ## Run in Editor
 
