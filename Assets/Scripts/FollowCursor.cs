@@ -9,8 +9,8 @@ public class FollowCursor : MonoBehaviour {
     }
 
     private void Update() {
-        Vector3 positon = m_Camera.ScreenToWorldPoint(Input.mousePosition);
-        positon.Scale(new Vector3(1, 1, 0));
-        m_Rigidbody2D.MovePosition(positon);
+        Vector3 position = m_Camera.ScreenToWorldPoint(Input.mousePosition);
+        position.Scale(new Vector3(1, 1, 0));
+        m_Rigidbody2D.MovePosition(position);
     }
 }
