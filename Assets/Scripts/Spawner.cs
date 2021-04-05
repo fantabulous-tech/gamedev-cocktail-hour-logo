@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour {
     [SerializeField] private float m_SpawnDelay = 0.5f;
-    [SerializeField] private float m_SpawnOffset = 1;
+    [SerializeField] private float m_SpawnOffset = 3;
     [SerializeField] private GameObject[] m_Items;
 
     private float m_NextSpawn;
@@ -20,18 +20,15 @@ public class Spawner : MonoBehaviour {
         }
 
         float offset = Random.Range(-m_SpawnOffset, m_SpawnOffset);
-        Instantiate(m_Items[m_NextIndex], m_Transform.position + Vector3.left*offset, m_Transform.rotation);
+        GameObject prefab = m_Items[m_NextIndex];
+        GameObject instance = Instantiate(prefab, m_Transform.position + Vector3.left*offset, m_Transform.rotation);
+        instance.name = prefab.name;
         m_NextSpawn = Time.time + m_SpawnDelay;
         m_NextIndex = GetNextIndex(m_NextIndex, m_Items.Length);
     }
 
     private static int GetNextIndex(int current, int length) {
         current++;
-
-        if (current >= length) {
-            current = 0;
-        }
-
-        return current;
+        return current >= length ? 0 : current;
     }
 }
