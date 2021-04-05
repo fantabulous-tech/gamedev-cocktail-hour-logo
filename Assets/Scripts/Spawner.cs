@@ -1,16 +1,16 @@
 using UnityEngine;
 
 public class Spawner : MonoBehaviour {
-    [SerializeField] private GameObject[] m_Items;
-    [SerializeField] private float m_Delay = 0.5f;
+    [SerializeField] private float m_SpawnDelay = 0.5f;
     [SerializeField] private float m_SpawnOffset = 1;
+    [SerializeField] private GameObject[] m_Items;
 
     private float m_NextSpawn;
     private int m_NextIndex;
     private Transform m_Transform;
 
     private void Start() {
-        m_NextSpawn = Time.time + m_Delay;
+        m_NextSpawn = Time.time + m_SpawnDelay;
         m_Transform = transform;
     }
 
@@ -20,8 +20,8 @@ public class Spawner : MonoBehaviour {
         }
 
         float offset = Random.Range(-m_SpawnOffset, m_SpawnOffset);
-        Destroy(Instantiate(m_Items[m_NextIndex], m_Transform.position + Vector3.left*offset, m_Transform.rotation), 20);
-        m_NextSpawn = Time.time + m_Delay;
+        Instantiate(m_Items[m_NextIndex], m_Transform.position + Vector3.left*offset, m_Transform.rotation);
+        m_NextSpawn = Time.time + m_SpawnDelay;
         m_NextIndex = GetNextIndex(m_NextIndex, m_Items.Length);
     }
 

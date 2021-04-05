@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6819049264264073724}
   - component: {fileID: 6819049264264073725}
   - component: {fileID: 6819049264264073714}
+  - component: {fileID: -6716958747061666880}
   m_Layer: 3
   m_Name: Ice Cube
   m_TagString: Untagged
@@ -130,7 +131,68 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 2.5823834, y: 5.02057}
-      - {x: -5.0310326, y: 2.583609}
-      - {x: -2.572706, y: -5.2865887}
-      - {x: 5.1785965, y: -2.7287211}
+    - - {x: 5.101021, y: -2.3788707}
+      - {x: 2.7487593, y: 4.984756}
+      - {x: 2.395586, y: 5.1606703}
+      - {x: -4.984333, y: 2.6536572}
+      - {x: -5.102147, y: 2.3101766}
+      - {x: -2.7568393, y: -4.9444823}
+      - {x: -2.3742335, y: -5.1581645}
+      - {x: 4.9801235, y: -2.693696}
+--- !u!114 &-6716958747061666880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6819049264264073712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0705a3b8f0b64ff429307dcee0c30a43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FadeCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.0000000037252903
+      value: 0
+      inSlope: 11.115672
+      outSlope: 11.115672
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.06967221
+    - serializedVersion: 3
+      time: 0.06281662
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.824029
+      value: 0.99785686
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -13.082146
+      outSlope: -13.082146
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.05460212
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_Lifetime: 10
+  m_SpriteRenderers:
+  - {fileID: 6819049264264073724}

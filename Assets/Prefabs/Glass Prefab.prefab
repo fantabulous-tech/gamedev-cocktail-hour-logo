@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6285353221057412128}
   - component: {fileID: 6285353221057412129}
+  - component: {fileID: 448764282742748317}
   m_Layer: 0
   m_Name: Glass Prefab
   m_TagString: Untagged
@@ -59,6 +60,43 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!60 &448764282742748317
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6285353221057412135}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 11.714169, y: 19.674854}
+      - {x: 11.360035, y: 20.163435}
+      - {x: 10.392453, y: 20.162424}
+      - {x: 7.0158567, y: 3.2789764}
+      - {x: -6.1404033, y: 3.263731}
+      - {x: -9.117267, y: 20.147526}
+      - {x: -10.524765, y: 20.141787}
+      - {x: -10.710803, y: 19.65396}
+      - {x: -7.261297, y: 0.2536651}
+      - {x: -6.898026, y: -0.0617522}
+      - {x: 7.866704, y: -0.06175089}
+      - {x: 8.257652, y: 0.2813406}
 --- !u!1 &6285353221504644106
 GameObject:
   m_ObjectHideFlags: 0
@@ -69,7 +107,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6285353221504644101}
   - component: {fileID: 6285353221504644100}
-  - component: {fileID: 6285353221504644107}
   m_Layer: 0
   m_Name: Glass@4x
   m_TagString: Untagged
@@ -142,30 +179,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!68 &6285353221504644107
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6285353221504644106}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0.07
-  m_Points:
-  - {x: 10.3538475, y: 9.405094}
-  - {x: 7.128324, y: -7.6199594}
-  - {x: -7.239612, y: -7.5567408}
-  - {x: -10.254374, y: 9.343549}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
 --- !u!1 &6285353221527513534
 GameObject:
   m_ObjectHideFlags: 0
