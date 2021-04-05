@@ -6,8 +6,8 @@ using UnityEngine;
 public class ScoreTracker : MonoBehaviour {
     [SerializeField] private TextMeshProUGUI m_HighScoreDisplay;
     [SerializeField] private TextMeshProUGUI m_CurrentScoreDisplay;
-    [SerializeField] private float m_PunchDuration = 1;
-    [SerializeField] private float m_PunchScale = 1.01f;
+    [SerializeField] private float m_PunchDuration = 0.5f;
+    [SerializeField] private float m_PunchScale = 0.1f;
     [SerializeField] private int m_PunchVibrato = 5;
     [SerializeField] private float m_PunchElasticity = 1;
 
@@ -26,7 +26,7 @@ public class ScoreTracker : MonoBehaviour {
             m_CurrentScore = 0;
             m_CurrentType = go.name;
         } else {
-            m_CurrentScoreDisplay.rectTransform.DOPunchScale(Vector3.one*m_PunchScale, m_PunchDuration, m_PunchVibrato, m_PunchElasticity);
+            Punch(m_CurrentScoreDisplay.transform);
         }
 
         m_CurrentScore++;
@@ -34,7 +34,7 @@ public class ScoreTracker : MonoBehaviour {
         if (m_CurrentScore > m_HighScore) {
             m_HighType = m_CurrentType;
             m_HighScore = m_CurrentScore;
-            m_HighScoreDisplay.rectTransform.DOPunchScale(Vector3.one*m_PunchScale, m_PunchDuration, m_PunchVibrato, m_PunchElasticity);
+            Punch(m_HighScoreDisplay.transform);
         }
 
         UpdateDisplay();
@@ -46,6 +46,12 @@ public class ScoreTracker : MonoBehaviour {
         }
 
         UpdateDisplay();
+    }
+
+    private void Punch(Transform t) {
+        t.DOKill();
+        t.localScale = Vector3.one;
+        t.DOPunchScale(Vector3.one*m_PunchScale, m_PunchDuration, m_PunchVibrato, m_PunchElasticity);
     }
 
     private void UpdateDisplay() {
